@@ -1,0 +1,47 @@
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen bg-white">
+    <div class="w-full max-w-4xl p-8 bg-gray-100 rounded-lg shadow-lg">
+        <div class="flex justify-between items-center mb-8">
+            <button 
+                class="bg-gray-200 text-black px-4 py-2 rounded" 
+                onclick="window.location.href='jual.html'"
+            >
+                Kembali
+            </button>
+            <h1 class="text-xl font-semibold">Pengaturan Jasa Kirim Toko</h1>
+            <div></div>
+        </div>
+        <div class="space-y-4">
+            <div class="flex justify-between items-center border-b border-gray-200 py-2">
+                <span class="text-lg font-medium">Aktifkan COD :</span>
+                <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600" />
+            </div>
+            <div class="flex justify-between items-center border-b border-gray-200 py-2">
+                <span class="text-lg font-medium">J&T Express :</span>
+                <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600" />
+            </div>
+            <div class="flex justify-between items-center border-b border-gray-200 py-2">
+                <span class="text-lg font-medium">JNE Reguler :</span>
+                <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600" />
+            </div>
+            <div class="flex justify-between items-center border-b border-gray-200 py-2">
+                <span class="text-lg font-medium">Ninja Xpress :</span>
+                <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600" />
+            </div>
+        </div>
+        <div class="flex justify-end mt-8">
+            <button 
+                class="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600" 
+                onclick="window.location.href='jual-selesai.html'"
+            >
+                Upload
+            </button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="w-full max-w-4xl bg-white rounded-lg shadow-lg p-6">
+        <a href="index.html" 
+           class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 mb-4 rounded-md inline-block transition duration-300"
+        >
+            Kembali
+        </a>
+        <div class="flex">
+            <div class="w-1/2">
+                <div id="imagePreview" class="bg-gray-300 w-full h-64 flex items-center justify-center rounded-lg overflow-hidden">
+                    <span class="text-gray-700 text-2xl">Foto Barang</span>
+                </div>
+                <input type="file" class="mt-4" accept="image/*" onchange="previewImage(event)" />
+            </div>
+            <div class="w-1/2 pl-6">
+                <div class="mb-4">
+                    <label class="block text-gray-800 text-lg font-semibold mb-2">Nama Barang:</label>
+                    <input type="text" placeholder="Masukkan nama barang" class="w-full bg-gray-200 p-2 rounded-md"/>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-800 text-lg font-semibold mb-2">Deskripsi Barang:</label>
+                    <textarea placeholder="Masukkan deskripsi barang" class="w-full bg-gray-200 p-2 rounded-md h-32"></textarea>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-800 text-lg font-semibold mb-2">Harga Barang:</label>
+                    <input type="number" placeholder="Masukkan harga barang" class="w-1/2 bg-gray-200 p-2 rounded-md"/>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-800 text-lg font-semibold mb-2">Stok Barang:</label>
+                    <input type="number" placeholder="Masukkan stok barang" class="w-1/2 bg-gray-200 p-2 rounded-md"/>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-end mt-4">
+            <a href="jual-lanjut.html" 
+               class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-md inline-block transition duration-300"
+            >
+                Lanjut
+            </a>
+        </div>
+    </div>
+
+    <script>
+        function previewImage(event) {
+            const file = event.target.files[0];
+            const reader = new FileReader();
+            reader.onload = function(){
+                const imagePreview = document.getElementById('imagePreview');
+                imagePreview.innerHTML = '<img src="' + reader.result + '" alt="Foto Barang" class="w-full h-full object-cover" />';
+            };
+            if (file) {
+                reader.readAsDataURL(file);
+            }
+        }
+    </script>
+</body>
+</html>
